@@ -23,6 +23,7 @@
 
 body {
     background-color: #f5f6f9;
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +46,7 @@ p {
 }
 
 /*==================
-    Header Styles
+    Start Header Styles
     ==============*/
 
 header {
@@ -190,3 +191,141 @@ header nav .login_signup a {
     margin-left: 10px;
     border-radius: 5px;
 }
+
+/*==================
+    End Header Styles
+    ==============*/
+
+
+/*==================
+    Start Cart Styles
+    ==============*/
+
+.cart {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: -400px;
+    padding: 30px;
+    width: 400px;
+    height: 100%;
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column ;
+    transition: 0.3s ease-in-out;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-top h4 span {
+    color: var(--parag-color);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.cart-top .close-cart {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-block: 1px solid var(--border-color);
+    padding-block: 20px;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.cart-items .item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cart-items img {
+    width: 100px;
+}
+
+.cart-items .item-info h4{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.delete-item {
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+}
+
+.delete-item:hover {
+    color: var(--dark-red);
+    scale: 1.2;
+}
+
+.cart-bot .sub_total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-bot .sub_total span {
+    color: var(--main-color);
+}
+
+.cart-bot .cart-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-bot .cart-cta button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s linear;
+}
+
+.cart-bot .cart-cta .checkout {
+    background-color: var(--main-color);
+    border: 1px solid transparent;
+}
+
+.cart-bot .cart-cta .shop {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+.cart-bot .cart-cta .checkout:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+.cart-bot .cart-cta .shop:hover {
+    background-color: var(--main-color);
+    border: 1px solid transparent;
+}
+
+/*==================
+    End Cart Styles
+    ==============*/

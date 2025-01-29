@@ -12,6 +12,7 @@
 </head>
 <body>
     
+    <!-- Start Header -->
     <header>
         <div class="container top-nav">
             <a href="./index.html">
@@ -22,7 +23,7 @@
                 <button type="submit">Search</button>
             </form>
 
-            <div class="cart_header">
+            <div onclick="openCart()" class="cart_header">
                 <div class="icon_cart">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="count_items">0</span>
@@ -50,7 +51,84 @@
             </div>
         </nav>
     </header>
+    <!-- End Header -->
 
+    <!-- Start Cart -->
+    <section class="cart">
+        <div class="cart-top">
+            <h4>
+                My Cart <span>( 0 items in cart )</span>
+            </h4>
+            <div onclick="closeCart()" class="close-cart">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="cart-items">
+            <div class="item">
+                <img src="./assets/img/product/product-1.jpg" alt="">
+                <div class="item-info">
+                    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </h4>
+                    <p class="price">
+                        $250
+                    </p>
+                </div>
+                <div class="delete-item">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/product/product-1.jpg" alt="">
+                <div class="item-info">
+                    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </h4>
+                    <p class="price">
+                        $250
+                    </p>
+                </div>
+                <div class="delete-item">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/product/product-1.jpg" alt="">
+                <div class="item-info">
+                    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </h4>
+                    <p class="price">
+                        $250
+                    </p>
+                </div>
+                <div class="delete-item">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/product/product-1.jpg" alt="">
+                <div class="item-info">
+                    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </h4>
+                    <p class="price">
+                        $250
+                    </p>
+                </div>
+                <div class="delete-item">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
+        <div class="cart-bot">
+            <div class="sub_total">
+                <p>Cart Subtotal</p>
+                <span>$820</span>
+            </div>
+            <div class="cart-cta">
+                <button class="checkout">Proceed to checkout</button>
+                <button class="shop">Shop more</button>
+            </div>
+        </div>
+    </section>
+    <!-- End Cart -->
     <script src="./js/main.js"></script>
 </body>
 </html>
