@@ -7,3 +7,11 @@ const openCart = () => {
 const closeCart = () => {
     cart.classList.remove("active")
 }
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+})
