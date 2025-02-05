@@ -470,6 +470,10 @@ header nav .login_signup a {
   position: relative;
 }
 
+.banners.second .container .banner_img {
+  width: 49%;
+}
+
 .banners .container .banner_img img {
   width: 100%;
 }
