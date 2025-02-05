@@ -1,14 +1,15 @@
 const productsElement = document.querySelector(".products");
+let productsList = [];
 
-const createProduct = (data) => {
-  for (let i = 0; i < data.length; i++) {
-    let { name, img, img_hover, price, old_price } = data[i];
+const createProduct = () => {
+  for (let i = 0; i < productsList.length; i++) {
+    let { id, name, img, img_hover, price, old_price } = productsList[i];
 
     if (old_price) {
       let percent = Math.floor(((old_price - price) / old_price) * 100);
 
       productsElement.innerHTML += `
-      <div class="product swiper-slide">
+      <div data-id="${id}" class="product swiper-slide">
         <div class="product_img">
           <img src="assets/${img}" alt="${name}" />
           <img
@@ -19,7 +20,7 @@ const createProduct = (data) => {
         </div>
         <div class="product_dicount">${percent}%</div>
         <div class="product_info">
-          <a href="#" class="product_title"
+          <a href="/product/${id}" class="product_title"
             >${name}</a
           >
           <div class="product_rating">
@@ -34,8 +35,8 @@ const createProduct = (data) => {
             <p class="old-price">$${old_price}</p>
           </div>
         </div>
-        <div class="product_cta">
-          <i class="fa-solid fa-cart-plus"></i>
+        <div data.id="${id}" class="product_cta">
+          <i class="fa-solid fa-cart-plus addCart"></i>
           <i class="fa-regular fa-heart"></i>
           <i class="fa-solid fa-share"></i>
         </div>
@@ -49,7 +50,12 @@ const fetchProducts = async () => {
   try {
     const res = await fetch("./js/items.json");
     const data = await res.json();
-    createProduct(data);
+    productsList = data;
+    createProduct();
+    if (localStorage.getItem("cart")) {
+      cartList = JSON.parse(localStorage.getItem("cart"));
+      createCartItem();
+    }
   } catch (err) {
     console.log("Error: ", err);
   }

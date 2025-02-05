@@ -24,6 +24,7 @@
 body {
   background-color: #f5f6f9;
   overflow-x: hidden;
+  margin-top: 180px;
 }
 
 h1,
@@ -56,6 +57,11 @@ p {
 
 header {
   background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
 }
 
 header .top-nav {
@@ -205,7 +211,7 @@ header nav .login_signup a {
 
 .cart {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -400px;
   padding: 30px;
@@ -215,7 +221,7 @@ header nav .login_signup a {
   display: flex;
   flex-direction: column;
   transition: 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .cart.active {
@@ -269,7 +275,24 @@ header nav .login_signup a {
 .cart-items .item-info h4 {
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.cart-items .box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-items .box span {
+  padding: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-items .plus,
+.cart-items .minus {
+  background: var(--main-color);
 }
 
 .delete-item {
