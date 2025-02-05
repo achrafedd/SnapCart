@@ -1,13 +1,13 @@
-const productsElement = document.querySelector('.products');
+const productsElement = document.querySelector(".products");
 
 const createProduct = (data) => {
   for (let i = 0; i < data.length; i++) {
-    let {name, img, img_hover, price, old_price} = data[i];
-    
-    if (old_price) {
-      let percent = Math.floor((old_price - price) / old_price * 100);
+    let { name, img, img_hover, price, old_price } = data[i];
 
-    productsElement.innerHTML += `
+    if (old_price) {
+      let percent = Math.floor(((old_price - price) / old_price) * 100);
+
+      productsElement.innerHTML += `
       <div class="product swiper-slide">
         <div class="product_img">
           <img src="assets/${img}" alt="${name}" />
@@ -34,11 +34,16 @@ const createProduct = (data) => {
             <p class="old-price">$${old_price}</p>
           </div>
         </div>
+        <div class="product_cta">
+          <i class="fa-solid fa-cart-plus"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-share"></i>
+        </div>
       </div>
-    `
+    `;
     }
   }
-}
+};
 
 const fetchProducts = async () => {
   try {
@@ -50,4 +55,5 @@ const fetchProducts = async () => {
   }
 };
 
-fetchProducts()
+fetchProducts();
+

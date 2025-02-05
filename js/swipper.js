@@ -10,7 +10,7 @@ let swiper = new Swiper(".slider-swiper", {
 
 new Swiper(".products-swiper", {
   autoplay: {
-    delay: 2500,
+    delay: 4000,
   },
   navigation: {
     nextEl: ".swiper-button-next",
