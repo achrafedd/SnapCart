@@ -16,7 +16,6 @@ let cartItemsQuantity = document.querySelector(".count_items");
 let subTotal = document.querySelector(".sub_total span");
 let cartTotal = document.querySelector(".price_cart");
 let totalItems = document.querySelector(".total_items");
-let total_price = 0;
 let cartList = [];
 
 productsElement.addEventListener("click", (e) => {
@@ -50,6 +49,7 @@ const addToCart = (id) => {
 };
 
 const createCartItem = () => {
+  let total_price = 0;
   cartItemsElement.innerHTML = "";
   if (cartList.length > 0) {
     cartList.forEach((cart) => {
@@ -61,7 +61,7 @@ const createCartItem = () => {
       );
       if (productsList[position] === undefined) return;
       let { name, price, img } = productsList[position];
-      total_price += price;
+      total_price += price * cart.quantity;
       cartItem.innerHTML += `
           <img src="./assets/${img}" alt="${name}" />
           <div class="item-info">
@@ -95,7 +95,7 @@ const plus = (product_id) => {
 const minus = (product_id) => {
   let position = cartList.findIndex((value) => value.product_id == product_id);
   if (cartList[position].quantity == 1) {
-    cartList[position] = {};
+    cartList.splice(position, 1);
     createCartItem();
     return;
   }
