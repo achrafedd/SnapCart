@@ -540,7 +540,8 @@ header nav .login_signup a {
     Start Sale Section
     ==============*/
 
-.sale {
+.sale,
+.featured {
   margin-block: 50px;
 }
 
@@ -693,11 +694,11 @@ header nav .login_signup a {
   background: var(--main-color);
 }
 
-.products-swiper {
+.swiper {
   position: relative;
 }
 
-.products-swiper .btn-swiper {
+.swiper .btn-swiper {
   position: absolute;
   top: 35px;
   right: 0;
@@ -713,11 +714,11 @@ header nav .login_signup a {
   font-weight: bold;
 }
 
-.products-swiper .btn-swiper::after {
+.swiper .btn-swiper::after {
   font-size: 25px;
 }
 
-.products-swiper .swiper-button-prev {
+.swiper .swiper-button-prev {
   left: calc(100% - 90px);
 }
 
