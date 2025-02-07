@@ -26,6 +26,14 @@ productsElement.addEventListener("click", (e) => {
   }
 });
 
+featuredElement.addEventListener("click", (e) => {
+  let positionClick = e.target;
+  if (positionClick.classList.contains("addCart")) {
+    let product_id = positionClick.parentElement.parentElement.dataset.id;
+    addToCart(product_id);
+  }
+});
+
 const addToCart = (id) => {
   const positionProductInTheCart = cartList.findIndex(
     (value) => value.product_id === id,

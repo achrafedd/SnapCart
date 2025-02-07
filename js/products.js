@@ -7,6 +7,7 @@ const createProduct = (product) => {
   const productElement = document.createElement("div");
   let percent = Math.floor(((old_price - price) / old_price) * 100);
   productElement.classList.add("product", "swiper-slide");
+  productElement.dataset.id = id;
 
   productElement.innerHTML += `
     <div class="product_img">
@@ -33,7 +34,7 @@ const createProduct = (product) => {
       ${old_price ? `<p class="old-price">$${old_price}</p>` : ""}
       </div>
     </div>
-    <div data.id="${id}" class="product_cta">
+    <div class="product_cta">
       <i class="fa-solid fa-cart-plus addCart"></i>
       <i class="fa-regular fa-heart"></i>
       <i class="fa-solid fa-share"></i>
