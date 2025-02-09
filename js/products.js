@@ -3,17 +3,17 @@ const featuredElement = document.querySelector(".featured .products");
 let productsList = [];
 
 const createProduct = (product) => {
-  let { id, name, img, img_hover, price, old_price } = product;
-  const productElement = document.createElement("div");
-  let percent = Math.floor(((old_price - price) / old_price) * 100);
-  productElement.classList.add("product", "swiper-slide");
-  productElement.dataset.id = id;
+	let { id, name, img, img_hover, price, old_price } = product;
+	const productElement = document.createElement("div");
+	let percent = Math.floor(((old_price - price) / old_price) * 100);
+	productElement.classList.add("product", "swiper-slide");
+	productElement.dataset.id = id;
 
-  productElement.innerHTML += `
+	productElement.innerHTML += `
     <div class="product_img">
-      <img src="assets/${img}" alt="${name}" />
+      <img src="../assets/${img}" alt="${name}" />
       <img
-        src="assets/${img_hover}"
+        src="../assets/${img_hover}"
         class="hover_img"
         alt="${name}"
       />
@@ -40,37 +40,37 @@ const createProduct = (product) => {
       <i class="fa-solid fa-share"></i>
     </div>
   `;
-  return productElement;
+	return productElement;
 };
 
 const saleProducts = () => {
-  for (let i = 0; i < productsList.length; i++) {
-    if (productsList[i].old_price) {
-      productsElement.appendChild(createProduct(productsList[i]));
-    }
-  }
+	for (let i = 0; i < productsList.length; i++) {
+		if (productsList[i].old_price) {
+			productsElement.appendChild(createProduct(productsList[i]));
+		}
+	}
 };
 
 const featuredProducts = () => {
-  for (let i = 0; i < productsList.length; i++) {
-    featuredElement.appendChild(createProduct(productsList[i]));
-  }
+	for (let i = 0; i < productsList.length; i++) {
+		featuredElement.appendChild(createProduct(productsList[i]));
+	}
 };
 
 const fetchProducts = async () => {
-  try {
-    const res = await fetch("./js/items.json");
-    const data = await res.json();
-    productsList = data;
-    saleProducts();
-    featuredProducts();
-    if (localStorage.getItem("cart")) {
-      cartList = JSON.parse(localStorage.getItem("cart"));
-      createCartItem();
-    }
-  } catch (err) {
-    console.log("Error: ", err);
-  }
+	try {
+		const res = await fetch("../js/items.json");
+		const data = await res.json();
+		productsList = data;
+		saleProducts();
+		featuredProducts();
+		if (localStorage.getItem("cart")) {
+			cartList = JSON.parse(localStorage.getItem("cart"));
+			createCartItem();
+		}
+	} catch (err) {
+		console.log("Error: ", err);
+	}
 };
 
 fetchProducts();
