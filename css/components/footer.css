@@ -3,12 +3,80 @@
     ==============*/
 
 .back {
-	background-color: #4d5969;
-	padding: 20px 0;
-	text-align: center;
-	text-transform: uppercase;
-	cursor: pointer;
-	color: #fff;
+  background-color: #4d5969;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+}
+
+footer .top {
+  padding: 30px 0;
+  background-color: #38424f;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .box {
+  flex: 1;
+}
+
+footer .logo {
+  margin-bottom: 20px;
+}
+
+footer .costomer-service {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+footer .costomer-service i {
+  color: var(--main-color);
+  font-size: 50px;
+}
+
+footer .content h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+footer .phone {
+  color: var(--main-color) !important;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .box > h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+footer li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+footer li a {
+  color: var(--parag-color);
+  text-transform: capitalize;
+}
+
+footer .bot {
+  background-color: #202935;
+  border-top: 1px solid var(--border-color);
+  padding: 20px 0;
 }
 
 /*==================
