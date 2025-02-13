@@ -1,4 +1,4 @@
-# Topico
+# SpanCart
 
 A simple E-commerce website built with HTML, CSS and JavaScript.
 
@@ -15,13 +15,13 @@ This is a fully responsive e-commerce website where users can browse products, a
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/achrafedd/topico.git
+git clone https://github.com/achrafedd/SnapCart.git
 ```
 
 2. Navigationto the project:
 
 ```bash
-cd topico
+cd SnapCart
 ```
 
 3. Open `index.html` in your browser to start the project.
