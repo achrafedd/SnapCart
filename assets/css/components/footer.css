@@ -30,6 +30,10 @@ footer .logo {
   margin-bottom: 20px;
 }
 
+footer .logo img {
+  width: 100px;
+}
+
 footer .costomer-service {
   display: flex;
   align-items: center;
@@ -77,6 +81,10 @@ footer .bot {
   background-color: #202935;
   border-top: 1px solid var(--border-color);
   padding: 20px 0;
+}
+
+footer .bot .container {
+  align-items: center;
 }
 
 /*==================

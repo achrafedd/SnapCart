@@ -18,6 +18,10 @@ header .top-nav {
   padding: 20px 0;
 }
 
+header .top-nav img {
+  width: 100px;
+} 
+
 header .top-nav .search {
   display: flex;
   position: relative;

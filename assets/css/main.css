@@ -1,0 +1,58 @@
+/*================
+    Global Styles
+    ==============*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik", serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #fcb700;
+  --dark-color: #222;
+  --parag-color: #666;
+  --dark-red: #d01418;
+  --border-color: #6666662a;
+  --name-item: #0066c0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f6f9;
+  overflow-x: hidden;
+  margin-top: 180px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+}
+
+p {
+  color: var(--parag-color);
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    width: 90%;
+  }
+}
+
+
