@@ -4,8 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <!-- Link CSS Components -->
+    <link rel="stylesheet" href="./assets/css/components/header.css" />
+    <link rel="stylesheet" href="./assets/css/components/cart.css" />
+    <link rel="stylesheet" href="./assets/css/components/footer.css" />
+    <!-- Link global and Login CSS  -->
+    <link rel="stylesheet" href="./assets/css/pages/signup.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+
 </head>
 <body>
-    Sign Up Page
+<!-- Start Header -->
+    <header>
+      <div class="container top-nav">
+        <a href="./index.html">
+          <img src="./assets/img/logo-black.png" alt="" />
+        </a>
+        <form action="" class="search">
+          <input type="search" placeholder="Search on products..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div onclick="openCart()" class="cart_header">
+          <div class="icon_cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count_items">0</span>
+          </div>
+          <div class="total_price">
+            <p>My Cart:</p>
+            <p class="price_cart">$0</p>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="container links">
+          <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./all_products.html">all products</a></li>
+            <li><a href="./about_us.html">about us</a></li>
+            <li><a href="./contact.html">contact</a></li>
+          </ul>
+
+          <div class="login_signup">
+            <a href="./login.html"
+              >login <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></a>
+            <a href="./signup.html"
+              >sign up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Cart -->
+    <section class="cart">
+      <div class="cart-top">
+        <h4>
+          My Cart
+          <span>( <span class="total_items">0</span> items in cart )</span>
+        </h4>
+        <div onclick="closeCart()" class="close-cart">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-bot">
+        <div class="sub_total">
+          <p>Cart Subtotal</p>
+          <span>$0</span>
+        </div>
+        <div class="cart-cta">
+          <button class="checkout">Proceed to checkout</button>
+          <button class="shop">Shop more</button>
+        </div>
+      </div>
+    </section>
+    <!-- End Cart -->
+
+    <!-- Start Signup Section -->
+    <section class="signup">
+      <div class="content">
+        <h2>register from here</h2>
+        <form method="post">
+          <div>
+            <label for="name">full name (*)</label>
+            <input type="text" name="name" id="name" placeholder="Full Name..." required minlength="8">
+          </div>
+          <div>
+            <label for="email">email address (*)</label>
+            <input type="email" name="email" id="email" placeholder="Email address..." required>
+          </div>
+          <div>
+            <label for="password">password (*)</label>
+            <input type="password" name="password" id="password" placeholder="password..." required minlength="8">
+          </div>
+          <button type="submit">register now</button>
+        </form>
+        <div class="register">
+          <div class="or">
+            <div></div>
+            <span>or</span>
+            <div></div>
+          </div>
+          <a href="./login.html">login now</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Login Section -->
+
+    <!-- Start Footer Section -->
+    <footer>
+      <div class="top">
+        <div class="container">
+          <div class="box">
+            <div class="logo">
+              <img src="./assets/img/logo-white.png" alt="Logo" />
+            </div>
+            <div class="costomer-service">
+              <div class="icon">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div class="content">
+                <h2>hotline free 24/7:</h2>
+                <h2 class="phone">(+100) 123 456 7890</h2>
+              </div>
+            </div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+          </div>
+          <div class="box">
+            <h2>FAQs & Help</h2>
+            <ul>
+              <li><a href="#">F.A.Q's</a></li>
+              <li><a href="#">Ordering Traking</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>shipping & delivery</h2>
+            <ul>
+              <li><a href="#">delivery information</a></li>
+              <li><a href="#">discount</a></li>
+              <li><a href="#">payment & shipping</a></li>
+              <li><a href="#">estimated delivery time</a></li>
+              <li><a href="#">shipping guide</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>information</h2>
+            <ul>
+              <li><a href="#">popular</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">your acount</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">trems & condition</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot">
+        <div class="container">
+          <div class="left">
+            <p>Copyright &copy; Topico. All Rights Reserved.</p>
+          </div>
+          <div class="payments">
+            <img src="./assets/img/payment-1.png" alt="" />
+            <img src="./assets/img/payment-2.png" alt="" />
+            <img src="./assets/img/payment-3.png" alt="" />
+            <img src="./assets/img/payment-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/addToCart.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+/*=============
+  Start Signup
+  ===========*/
+
+.signup {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 50px;
+}
+
+.signup .content {
+  padding: 50px;
+  border: 2px solid var(--border-color);
+}
+
+.signup h2 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.signup label {
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.signup input:not([type="checkbox"]):focus:invalid {
+  border-color: #ff3333;
+}
+
+.signup input:not([type="checkbox"]):focus:valid {
+  border-color: #4db34d;
+} 
+
+.signup input:not([type="checkbox"]) {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.signup .pass {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.signup .pass a {
+  color: var(--parag-color);
+  font-size: 14px;
+}
+
+.signup button {
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 10px 0;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s linear;
+}
+
+.signup button:hover {
+  background-color: #fff;
+}
+
+.signup .or {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup .or div {
+  border: 1px solid var(--border-color);
+  height: 0;
+  width: 45%;
+}
+
+.register a {
+  display: inline-block;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin-block: 10px;
+  padding: 10px 0;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  transition: 0.3s linear;
+}
+
+.register a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/*=============
+  End Signup
+  ===========*/
