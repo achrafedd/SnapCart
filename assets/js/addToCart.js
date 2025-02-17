@@ -61,7 +61,7 @@ const createCartItem = () => {
 			let { name, price, img } = productsList[position];
 			total_price += price * cart.quantity;
 			cartItem.innerHTML += `
-          <img src="../assets/${img}" alt="${name}" />
+          <img src="${img}" alt="${name}" />
           <div class="item-info">
             <h4>${name}</h4>
             <div class="box">
