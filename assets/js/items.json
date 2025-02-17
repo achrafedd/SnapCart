@@ -1,125 +1,175 @@
 [
-      {
-        "id": 0,
-        "img": "img/product/product1.jpg",
-        "img_hover": "img/product/product-1.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 185,
-        "old_price": 225
-      },
-      {
-        "id": 1,
-        "img": "img/product/product2.jpg",
-        "img_hover": "img/product/product-2.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 100,
-        "old_price": 120
-      },
-      {
-        "id": 2,
-        "img": "img/product/product3.jpg",
-        "img_hover": "img/product/product-3.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 140,
-        "old_price": 200
-      },
-      {
-        "id": 3,
-        "img": "img/product/product4.jpg",
-        "img_hover": "img/product/product-4.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 90,
-        "old_price": 110
-      },
-      {
-        "id": 4,
-        "img": "img/product/product5.jpg",
-        "img_hover": "img/product/product-5.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 350,
-        "old_price": 420
-
-      },
-      {
-        "id": 5,
-        "img": "img/product/product6.jpg",
-        "img_hover": "img/product/product-6.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 115,
-        "old_price": 235
-      },
-      {
-        "id": 6,
-        "img": "img/product/product7.jpg",
-        "img_hover": "img/product/product-7.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 225,
-        "old_price": 280
-      },
-      {
-        "id": 7,
-        "img": "img/product/product8.jpg",
-        "img_hover": "img/product/product-8.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 150,
-        "old_price": 200
-      },
-      {
-        "id": 8,
-        "img": "img/product/product-1.jpg",
-        "img_hover": "img/product/product1.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 180
-      },
-      {
-        "id": 9,
-        "img": "img/product/product-2.jpg",
-        "img_hover": "img/product/product2.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 300
-      },
-      {
-        "id": 10,
-        "img": "img/product/product-3.jpg",
-        "img_hover": "img/product/product3.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 250
-      },
-      {
-        "id": 11,
-        "img": "img/product/product-4.jpg",
-        "img_hover": "img/product/product4.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 120
-      },
-      {
-        "id": 12,
-        "img": "img/product/product-5.jpg",
-        "img_hover": "img/product/product5.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 90
-      },
-      {
-        "id": 13,
-        "img": "img/product/product-6.jpg",
-        "img_hover": "img/product/product6.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 129
-      },
-      {
-        "id": 14,
-        "img": "img/product/product-7.jpg",
-        "img_hover": "img/product/product7.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 180
-      },
-      {
-        "id": 15,
-        "img": "img/product/product-8.jpg",
-        "img_hover": "img/product/product8.jpg",
-        "name": "Original Mobile Android Dual SIM Smart Phone G3",
-        "price": 60
-      } 
-
-    ]
-  
+  {
+    "name": "Apple iPhone 15 Pro",
+    "image": "/assets/img/product/product-1.jpg",
+    "hoverImg": "/assets/img/product/product-1.jpg",
+    "price": 999.0,
+    "oldPrice": 1099.0,
+    "description": "The latest iPhone with a titanium design, A17 Pro chip, and advanced camera system.",
+    "rating": 4.9
+  },
+  {
+    "name": "Samsung Galaxy S23 Ultra",
+    "image": "/assets/img/product/product-2.jpg",
+    "hoverImg": "/assets/img/product/product-2.jpg",
+    "price": 1199.99,
+    "oldPrice": 1299.99,
+    "description": "A powerhouse smartphone with a 200MP camera, Snapdragon 8 Gen 2, and S Pen integration.",
+    "rating": 4.8
+  },
+  {
+    "name": "Sony WH-1000XM5 Wireless Headphones",
+    "image": "/assets/img/product/product-3.jpg",
+    "hoverImg": "/assets/img/product/product-3.jpg",
+    "price": 399.99,
+    "oldPrice": 449.99,
+    "description": "Industry-leading noise cancellation and exceptional sound quality.",
+    "rating": 4.7
+  },
+  {
+    "name": "Apple MacBook Air M2",
+    "image": "/assets/img/product/product-4.jpeg",
+    "hoverImg": "/assets/img/product/product-4.jpeg",
+    "price": 1099.0,
+    "oldPrice": 1199.0,
+    "description": "Ultra-thin and lightweight laptop with the powerful Apple M2 chip.",
+    "rating": 4.8
+  },
+  {
+    "name": "Dell XPS 13 Plus",
+    "image": "/assets/img/product/product-5.jpg",
+    "hoverImg": "/assets/img/product/product-5.jpg",
+    "price": 1299.99,
+    "oldPrice": 1499.99,
+    "description": "A premium ultrabook with a sleek design and powerful performance.",
+    "rating": 4.6
+  },
+  {
+    "name": "Google Pixel 8 Pro",
+    "image": "/assets/img/product/product-6.jpg",
+    "hoverImg": "/assets/img/product/product-6.jpg",
+    "price": 899.0,
+    "oldPrice": 999.0,
+    "description": "Google's flagship smartphone with AI-powered features and an excellent camera.",
+    "rating": 4.7
+  },
+  {
+    "name": "Microsoft Surface Laptop 5",
+    "image": "/assets/img/product/product-7.jpeg",
+    "hoverImg": "/assets/img/product/product-7.jpeg",
+    "price": 1299.0,
+    "oldPrice": 1399.0,
+    "description": "A sleek and powerful Windows laptop with a touchscreen display.",
+    "rating": 4.5
+  },
+  {
+    "name": "Amazon Echo Dot (5th Gen)",
+    "image": "/assets/img/product/product-8.jpg",
+    "hoverImg": "/assets/img/product/product-8.jpg",
+    "price": 49.99,
+    "description": "A compact smart speaker with Alexa voice control.",
+    "rating": 4.6
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "image": "/assets/img/product/product-9.jpg",
+    "hoverImg": "/assets/img/product/product-9.jpg",
+    "price": 399.0,
+    "oldPrice": 429.0,
+    "description": "The latest Apple Watch with advanced health and fitness features.",
+    "rating": 4.8
+  },
+  {
+    "name": "Samsung Galaxy Tab S9",
+    "image": "/assets/img/product/product-10.jpg",
+    "hoverImg": "/assets/img/product/product-10.jpg",
+    "price": 799.99,
+    "description": "A premium Android tablet with a stunning AMOLED display.",
+    "rating": 4.7
+  },
+  {
+    "name": "Bose QuietComfort 45 Headphones",
+    "image": "/assets/img/product/product-11.jpg",
+    "hoverImg": "/assets/img/product/product-11.jpg",
+    "price": 329.0,
+    "oldPrice": 349.0,
+    "description": "Noise-cancelling headphones with exceptional sound quality.",
+    "rating": 4.7
+  },
+  {
+    "name": "Logitech MX Master 3S Mouse",
+    "image": "/assets/img/product/product-12.jpg",
+    "hoverImg": "/assets/img/product/product-12.jpg",
+    "price": 99.99,
+    "description": "A premium wireless mouse designed for productivity.",
+    "rating": 4.8
+  },
+  {
+    "name": "HP Spectre x360 14",
+    "image": "/assets/img/product/product-13.jpg",
+    "hoverImg": "/assets/img/product/product-13.jpg",
+    "price": 1399.99,
+    "oldPrice": 1599.99,
+    "description": "A versatile 2-in-1 laptop with a stunning OLED display.",
+    "rating": 4.6
+  },
+  {
+    "name": "Nintendo Switch OLED",
+    "image": "/assets/img/product/product-14.png",
+    "hoverImg": "/assets/img/product/product-14.png",
+    "price": 349.99,
+    "description": "The latest Nintendo Switch with a vibrant OLED screen.",
+    "rating": 4.7
+  },
+  {
+    "name": "Razer Blade 15 Gaming Laptop",
+    "image": "/assets/img/product/product-15.jpg",
+    "hoverImg": "/assets/img/product/product-15.jpg",
+    "price": 2499.99,
+    "oldPrice": 2799.99,
+    "description": "A high-performance gaming laptop with a sleek design.",
+    "rating": 4.6
+  },
+  {
+    "name": "GoPro Hero 12 Black",
+    "image": "/assets/img/product/product-16.jpg",
+    "hoverImg": "/assets/img/product/product-16.jpg",
+    "price": 499.99,
+    "description": "The latest action camera with improved stabilization and video quality.",
+    "rating": 4.7
+  },
+  {
+    "name": "LG C2 OLED TV",
+    "image": "/assets/img/product/product-17.jpg",
+    "hoverImg": "/assets/img/product/product-17.jpg",
+    "price": 1999.99,
+    "oldPrice": 2499.99,
+    "description": "A stunning OLED TV with perfect blacks and vibrant colors.",
+    "rating": 4.8
+  },
+  {
+    "name": "Canon EOS R5 Mirrorless Camera",
+    "image": "/assets/img/product/product-18.png",
+    "hoverImg": "/assets/img/product/product-18.png",
+    "price": 3899.0,
+    "description": "A professional-grade mirrorless camera with 8K video recording.",
+    "rating": 4.9
+  },
+  {
+    "name": "DJI Mavic 3 Drone",
+    "image": "/assets/img/product/product-19.png",
+    "hoverImg": "/assets/img/product/product-19.png",
+    "price": 2199.0,
+    "oldPrice": 2499.0,
+    "description": "A high-end drone with Hasselblad camera and long flight time.",
+    "rating": 4.8
+  },
+  {
+    "name": "PlayStation 5",
+    "image": "/assets/img/product/product-20.jpg",
+    "hoverImg": "/assets/img/product/product-20.jpg",
+    "price": 499.99,
+    "description": "The next-gen gaming console with stunning graphics and fast loading times.",
+    "rating": 4.9
+  }
+]

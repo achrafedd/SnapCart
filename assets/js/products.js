@@ -3,22 +3,22 @@ const featuredElement = document.querySelector(".featured .products");
 let productsList = [];
 
 const createProduct = (product) => {
-	let { id, name, img, img_hover, price, old_price } = product;
+	let { id, name, image, hoverImg, price, oldPrice } = product;
 	const productElement = document.createElement("div");
-	let percent = Math.floor(((old_price - price) / old_price) * 100);
+	let percent = Math.floor(((oldPrice - price) / oldPrice) * 100);
 	productElement.classList.add("product", "swiper-slide");
 	productElement.dataset.id = id;
 
 	productElement.innerHTML += `
     <div class="product_img">
-      <img src="../assets/${img}" alt="${name}" />
+      <img src="${image}" alt="${name}" />
       <img
-        src="../assets/${img_hover}"
+        src="${hoverImg}"
         class="hover_img"
         alt="${name}"
       />
     </div>
-    ${old_price ? `<div class="product_dicount">${percent}%</div>` : ""}
+    ${oldPrice ? `<div class="product_dicount">${percent}%</div>` : ""}
     <div class="product_ctact_info">
       <a href="/product/${id}" class="product_title"
         >${name}</a>
@@ -31,7 +31,7 @@ const createProduct = (product) => {
       </div>
       <div class="product_price">
       <p class="new-price">$${price}</p>
-      ${old_price ? `<p class="old-price">$${old_price}</p>` : ""}
+      ${oldPrice ? `<p class="old-price">$${oldPrice}</p>` : ""}
       </div>
     </div>
     <div class="product_cta">
@@ -45,7 +45,7 @@ const createProduct = (product) => {
 
 const saleProducts = () => {
 	for (let i = 0; i < productsList.length; i++) {
-		if (productsList[i].old_price) {
+		if (productsList[i].oldPrice) {
 			productsElement.appendChild(createProduct(productsList[i]));
 		}
 	}
@@ -59,9 +59,10 @@ const featuredProducts = () => {
 
 const fetchProducts = async () => {
 	try {
-		const res = await fetch("../js/items.json");
+		const res = await fetch("./assets/js/items.json");
 		const data = await res.json();
 		productsList = data;
+    console.log(data)
 		saleProducts();
 		featuredProducts();
 		if (localStorage.getItem("cart")) {
