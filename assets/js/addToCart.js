@@ -58,10 +58,10 @@ const createCartItem = () => {
 				(value) => value.id == cart.product_id
 			);
 			if (productsList[position] === undefined) return;
-			let { name, price, img } = productsList[position];
+			let { name, price, image } = productsList[position];
 			total_price += price * cart.quantity;
 			cartItem.innerHTML += `
-          <img src="${img}" alt="${name}" />
+          <img src="${image}" alt="${name}" />
           <div class="item-info">
             <h4>${name}</h4>
             <div class="box">
@@ -79,8 +79,8 @@ const createCartItem = () => {
 	}
 	cartItemsQuantity.innerHTML = cartList.length;
 	totalItems.innerHTML = cartList.length;
-	cartTotal.innerHTML = `$${total_price}`;
-	subTotal.innerHTML = `$${total_price}`;
+	cartTotal.innerHTML = `$${total_price.toFixed(2)}`;
+	subTotal.innerHTML = `$${total_price.toFixed(2)}`;
 	addToMemory();
 };
 

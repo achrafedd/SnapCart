@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Apple iPhone 15 Pro",
     "image": "/assets/img/product/product-1.jpg",
     "hoverImg": "/assets/img/product/product-1.jpg",
@@ -9,6 +10,7 @@
     "rating": 4.9
   },
   {
+    "id": 2,
     "name": "Samsung Galaxy S23 Ultra",
     "image": "/assets/img/product/product-2.jpg",
     "hoverImg": "/assets/img/product/product-2.jpg",
@@ -18,6 +20,7 @@
     "rating": 4.8
   },
   {
+    "id": 3,
     "name": "Sony WH-1000XM5 Wireless Headphones",
     "image": "/assets/img/product/product-3.jpg",
     "hoverImg": "/assets/img/product/product-3.jpg",
@@ -27,6 +30,7 @@
     "rating": 4.7
   },
   {
+    "id": 4,
     "name": "Apple MacBook Air M2",
     "image": "/assets/img/product/product-4.jpeg",
     "hoverImg": "/assets/img/product/product-4.jpeg",
@@ -36,6 +40,7 @@
     "rating": 4.8
   },
   {
+    "id": 5,
     "name": "Dell XPS 13 Plus",
     "image": "/assets/img/product/product-5.jpg",
     "hoverImg": "/assets/img/product/product-5.jpg",
@@ -45,6 +50,7 @@
     "rating": 4.6
   },
   {
+    "id": 6,
     "name": "Google Pixel 8 Pro",
     "image": "/assets/img/product/product-6.jpg",
     "hoverImg": "/assets/img/product/product-6.jpg",
@@ -54,6 +60,7 @@
     "rating": 4.7
   },
   {
+    "id": 7,
     "name": "Microsoft Surface Laptop 5",
     "image": "/assets/img/product/product-7.jpeg",
     "hoverImg": "/assets/img/product/product-7.jpeg",
@@ -63,6 +70,7 @@
     "rating": 4.5
   },
   {
+    "id": 8,
     "name": "Amazon Echo Dot (5th Gen)",
     "image": "/assets/img/product/product-8.jpg",
     "hoverImg": "/assets/img/product/product-8.jpg",
@@ -71,6 +79,7 @@
     "rating": 4.6
   },
   {
+    "id": 9,
     "name": "Apple Watch Series 9",
     "image": "/assets/img/product/product-9.jpg",
     "hoverImg": "/assets/img/product/product-9.jpg",
@@ -80,6 +89,7 @@
     "rating": 4.8
   },
   {
+    "id": 10,
     "name": "Samsung Galaxy Tab S9",
     "image": "/assets/img/product/product-10.jpg",
     "hoverImg": "/assets/img/product/product-10.jpg",
@@ -88,6 +98,7 @@
     "rating": 4.7
   },
   {
+    "id": 11,
     "name": "Bose QuietComfort 45 Headphones",
     "image": "/assets/img/product/product-11.jpg",
     "hoverImg": "/assets/img/product/product-11.jpg",
@@ -97,6 +108,7 @@
     "rating": 4.7
   },
   {
+    "id": 12,
     "name": "Logitech MX Master 3S Mouse",
     "image": "/assets/img/product/product-12.jpg",
     "hoverImg": "/assets/img/product/product-12.jpg",
@@ -105,6 +117,7 @@
     "rating": 4.8
   },
   {
+    "id": 13,
     "name": "HP Spectre x360 14",
     "image": "/assets/img/product/product-13.jpg",
     "hoverImg": "/assets/img/product/product-13.jpg",
@@ -114,6 +127,7 @@
     "rating": 4.6
   },
   {
+    "id": 14,
     "name": "Nintendo Switch OLED",
     "image": "/assets/img/product/product-14.png",
     "hoverImg": "/assets/img/product/product-14.png",
@@ -122,6 +136,7 @@
     "rating": 4.7
   },
   {
+    "id": 15,
     "name": "Razer Blade 15 Gaming Laptop",
     "image": "/assets/img/product/product-15.jpg",
     "hoverImg": "/assets/img/product/product-15.jpg",
@@ -131,6 +146,7 @@
     "rating": 4.6
   },
   {
+    "id": 16,
     "name": "GoPro Hero 12 Black",
     "image": "/assets/img/product/product-16.jpg",
     "hoverImg": "/assets/img/product/product-16.jpg",
@@ -139,6 +155,7 @@
     "rating": 4.7
   },
   {
+    "id": 17,
     "name": "LG C2 OLED TV",
     "image": "/assets/img/product/product-17.jpg",
     "hoverImg": "/assets/img/product/product-17.jpg",
@@ -148,6 +165,7 @@
     "rating": 4.8
   },
   {
+    "id": 18,
     "name": "Canon EOS R5 Mirrorless Camera",
     "image": "/assets/img/product/product-18.png",
     "hoverImg": "/assets/img/product/product-18.png",
@@ -156,6 +174,7 @@
     "rating": 4.9
   },
   {
+    "id": 19,
     "name": "DJI Mavic 3 Drone",
     "image": "/assets/img/product/product-19.png",
     "hoverImg": "/assets/img/product/product-19.png",
@@ -165,6 +184,7 @@
     "rating": 4.8
   },
   {
+    "id": 20,
     "name": "PlayStation 5",
     "image": "/assets/img/product/product-20.jpg",
     "hoverImg": "/assets/img/product/product-20.jpg",
