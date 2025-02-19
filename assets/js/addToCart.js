@@ -8,59 +8,67 @@ let cartTotal = document.querySelector(".price_cart");
 let totalItems = document.querySelector(".total_items");
 let cartList = [];
 
-productsElement.addEventListener("click", (e) => {
-	let positionClick = e.target;
-	if (positionClick.classList.contains("addCart")) {
-		let product_id = positionClick.parentElement.parentElement.dataset.id;
-		addToCart(product_id);
-	}
+productsElement?.addEventListener("click", (e) => {
+  let positionClick = e.target;
+  if (positionClick.classList.contains("addCart")) {
+    let product_id = positionClick.parentElement.parentElement.dataset.id;
+    addToCart(product_id);
+  }
 });
 
-featuredElement.addEventListener("click", (e) => {
-	let positionClick = e.target;
-	if (positionClick.classList.contains("addCart")) {
-		let product_id = positionClick.parentElement.parentElement.dataset.id;
-		addToCart(product_id);
-	}
+featuredElement?.addEventListener("click", (e) => {
+  let positionClick = e.target;
+  if (positionClick.classList.contains("addCart")) {
+    let product_id = positionClick.parentElement.parentElement.dataset.id;
+    addToCart(product_id);
+  }
+});
+
+allProductsElement?.addEventListener("click", (e) => {
+  let positionClick = e.target;
+  if (positionClick.classList.contains("addCart")) {
+    let product_id = positionClick.parentElement.parentElement.dataset.id;
+    addToCart(product_id);
+  }
 });
 
 const addToCart = (id) => {
-	const positionProductInTheCart = cartList.findIndex(
-		(value) => value.product_id === id
-	);
-	if (cartList.length <= 0) {
-		cartList = [
-			{
-				product_id: id,
-				quantity: 1,
-			},
-		];
-	} else if (positionProductInTheCart < 0) {
-		cartList.push({
-			product_id: id,
-			quantity: 1,
-		});
-	} else {
-		cartList[positionProductInTheCart].quantity += 1;
-	}
-	createCartItem();
+  const positionProductInTheCart = cartList.findIndex(
+    (value) => value.product_id === id
+  );
+  if (cartList.length <= 0) {
+    cartList = [
+      {
+        product_id: id,
+        quantity: 1,
+      },
+    ];
+  } else if (positionProductInTheCart < 0) {
+    cartList.push({
+      product_id: id,
+      quantity: 1,
+    });
+  } else {
+    cartList[positionProductInTheCart].quantity += 1;
+  }
+  createCartItem();
 };
 
 const createCartItem = () => {
-	let total_price = 0;
-	cartItemsElement.innerHTML = "";
-	if (cartList.length > 0) {
-		cartList.forEach((cart) => {
-			let cartItem = document.createElement("div");
-			cartItem.classList.add("item");
+  let total_price = 0;
+  cartItemsElement.innerHTML = "";
+  if (cartList.length > 0) {
+    cartList.forEach((cart) => {
+      let cartItem = document.createElement("div");
+      cartItem.classList.add("item");
 
-			let position = productsList.findIndex(
-				(value) => value.id == cart.product_id
-			);
-			if (productsList[position] === undefined) return;
-			let { name, price, image } = productsList[position];
-			total_price += price * cart.quantity;
-			cartItem.innerHTML += `
+      let position = productsList.findIndex(
+        (value) => value.id == cart.product_id
+      );
+      if (productsList[position] === undefined) return;
+      let { name, price, image } = productsList[position];
+      total_price += price * cart.quantity;
+      cartItem.innerHTML += `
           <img src="${image}" alt="${name}" />
           <div class="item-info">
             <h4>${name}</h4>
@@ -74,33 +82,33 @@ const createCartItem = () => {
             </div>
           </div>
         `;
-			cartItemsElement.appendChild(cartItem);
-		});
-	}
-	cartItemsQuantity.innerHTML = cartList.length;
-	totalItems.innerHTML = cartList.length;
-	cartTotal.innerHTML = `$${total_price.toFixed(2)}`;
-	subTotal.innerHTML = `$${total_price.toFixed(2)}`;
-	addToMemory();
+      cartItemsElement.appendChild(cartItem);
+    });
+  }
+  cartItemsQuantity.innerHTML = cartList.length;
+  totalItems.innerHTML = cartList.length;
+  cartTotal.innerHTML = `$${total_price.toFixed(2)}`;
+  subTotal.innerHTML = `$${total_price.toFixed(2)}`;
+  addToMemory();
 };
 
 const plus = (product_id) => {
-	let position = cartList.findIndex((value) => value.product_id == product_id);
-	cartList[position].quantity += 1;
-	createCartItem();
+  let position = cartList.findIndex((value) => value.product_id == product_id);
+  cartList[position].quantity += 1;
+  createCartItem();
 };
 
 const minus = (product_id) => {
-	let position = cartList.findIndex((value) => value.product_id == product_id);
-	if (cartList[position].quantity == 1) {
-		cartList.splice(position, 1);
-		createCartItem();
-		return;
-	}
-	cartList[position].quantity -= 1;
-	createCartItem();
+  let position = cartList.findIndex((value) => value.product_id == product_id);
+  if (cartList[position].quantity == 1) {
+    cartList.splice(position, 1);
+    createCartItem();
+    return;
+  }
+  cartList[position].quantity -= 1;
+  createCartItem();
 };
 
 const addToMemory = () => {
-	localStorage.setItem("cart", JSON.stringify(cartList));
+  localStorage.setItem("cart", JSON.stringify(cartList));
 };

@@ -1,0 +1,124 @@
+/*=============
+  Star Products
+  ===========*/
+
+main {
+  margin-block: 50px;
+}
+
+main .container {
+  display: flex;
+  gap: 30px;
+}
+
+aside {
+  flex: 1;
+}
+
+aside .box {
+  transition: 0.3s ease-in;
+}
+
+aside .title {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  cursor: pointer;
+}
+
+aside .title i {
+  transition: 0.3s ease-in;
+}
+
+aside .title.active i {
+  rotate: 180deg;
+}
+
+aside .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+aside .content {
+  display: none;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+  transition: 0.3s ease-in;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* disabel input number buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+aside .content input {
+  margin-top: 5px;
+  display: block;
+  width: 100px;
+  padding: 15px 20px;
+  -moz-appearance: textfield;
+}
+
+aside .content span {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+aside .content.active {
+  display: flex;
+}
+
+aside .content .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+aside .content .color.active {
+  border-color: #5c5c5c;
+}
+
+aside .content .color:hover {
+  border-color: #5c5c5c;
+}
+
+section {
+  flex: 2.5;
+}
+
+section .banner {
+  margin-bottom: 30px;
+}
+
+section .banner img {
+  width: 100%;
+}
+
+section .products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/*=============
+  Star Products
+  ===========*/

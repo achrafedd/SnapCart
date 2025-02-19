@@ -9,6 +9,6 @@ const closeCart = () => {
 	cart.classList.remove("active");
 };
 
-backButton.addEventListener("click", () => {
+backButton?.addEventListener("click", () => {
 	window.scrollTo(0, 0);
 });
