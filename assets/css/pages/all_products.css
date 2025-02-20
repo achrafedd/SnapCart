@@ -80,6 +80,10 @@ aside .content span {
   cursor: pointer;
 }
 
+aside .content span.active {
+  color: red;
+}
+
 aside .content.active {
   display: flex;
 }

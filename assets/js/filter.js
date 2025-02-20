@@ -1,5 +1,7 @@
 const colors = document.querySelectorAll(".color");
 const box = document.querySelectorAll(".box");
+const filter = document.querySelector(".filter");
+const sizes = document.querySelectorAll(".size span");
 let filters = {
   color: [],
   price: {
@@ -23,7 +25,14 @@ for (let i = 0; i < colors.length; i++) {
       filters.color.push(color);
       colors[i].classList.add("active");
     }
-    console.log(filters.color);
+  });
+}
+
+for (let i = 0; i < sizes.length; i++) {
+  sizes[i].addEventListener("click", (e) => {
+    filters.size = e.target.innerText;
+    sizes.forEach((e) => e.classList.remove("active"));
+    e.target.classList.add("active");
   });
 }
 
@@ -36,3 +45,12 @@ for (let i = 0; i < box.length; i++) {
     content.classList.toggle("active");
   });
 }
+
+filter.addEventListener("click", () => {
+  // get min and max values
+  filters.price.min = min.value;
+  filters.price.max = max.value;
+
+  // send filters to backend
+  console.log(filters);
+});
