@@ -60,6 +60,7 @@ const featuredProducts = () => {
 };
 
 const allProducts = () => {
+  allProductsElement.innerHTML = "";
   for (let i = 0; i < productsList.length; i++) {
     allProductsElement?.appendChild(createProduct(productsList[i]));
   }
@@ -73,7 +74,7 @@ const fetchProducts = async () => {
     saleProducts();
     featuredProducts();
     allProducts();
-
+    pagination();
     if (localStorage.getItem("cart")) {
       cartList = JSON.parse(localStorage.getItem("cart"));
       createCartItem();

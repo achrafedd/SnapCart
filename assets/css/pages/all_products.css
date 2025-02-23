@@ -123,6 +123,32 @@ section .products {
   gap: 15px;
 }
 
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-block: 20px;
+}
+
+.pagination span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  border-color: #000;
+}
+
+.pagination .nums {
+  display: flex;
+  gap: 10px;
+}
+
 /*=============
   Star Products
   ===========*/
