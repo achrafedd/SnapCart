@@ -12,6 +12,7 @@ const createProduct = (product) => {
   productElement.dataset.id = id;
 
   productElement.innerHTML += `
+    <a href="/product.html" >
     <div class="product_img">
       <img src="${image}" alt="${name}" />
       <img
@@ -20,10 +21,10 @@ const createProduct = (product) => {
         alt="${name}"
       />
     </div>
+    <span class="product_title">${name}</span>
+    </a>
     ${oldPrice ? `<div class="product_dicount">${percent}%</div>` : ""}
     <div class="product_ctact_info">
-      <a href="/product/${id}" class="product_title"
-        >${name}</a>
       <div class="product_rating">
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>

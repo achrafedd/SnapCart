@@ -87,6 +87,10 @@ footer .bot .container {
   align-items: center;
 }
 
+footer .bot .payments {
+  display: flex;
+  gap: 10px;
+}
 /*==================
     End Footer Styles
     ==============*/

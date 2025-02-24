@@ -1,0 +1,77 @@
+/*==================
+    Start Sale Section
+    ==============*/
+
+.sale {
+  margin-block: 50px;
+}
+
+.sale_header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  position: relative;
+  width: fit-content;
+}
+
+.sale_header h2 {
+  text-transform: capitalize;
+}
+
+.sale_header span {
+  font-weight: 400;
+}
+
+.sale_header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--main-color);
+}
+
+/*==================
+        End Sale Section
+        ==============*/
+
+/*==================
+        Start Products Styles
+        ==============*/
+
+.products {
+  padding: 20px 0;
+  display: flex;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper .btn-swiper {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: var(--main-color);
+  width: 35px;
+  height: 35px;
+  padding: 0 18px;
+  line-height: 0;
+  text-align: center;
+  color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.swiper .btn-swiper::after {
+  font-size: 25px;
+}
+
+.swiper .swiper-button-prev {
+  left: calc(100% - 90px);
+}
+
+/*==================
+        End Products Styles
+        ==============*/

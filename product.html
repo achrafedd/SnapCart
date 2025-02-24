@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <!-- Link CSS Components -->
+    <link rel="stylesheet" href="./assets/css/components/header.css" />
+    <link rel="stylesheet" href="./assets/css/components/sale.css" />
+    <link rel="stylesheet" href="./assets/css/components/product-card.css" />
+    <link rel="stylesheet" href="./assets/css/components/footer.css" />
+    <link rel="stylesheet" href="./assets/css/components/cart.css" />
+    <!-- Link global and Home CSS  -->
+    <link rel="stylesheet" href="./assets/css/pages/product.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swipper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container top-nav">
+        <a href="./index.html">
+          <img src="./assets/img/logo-black.png" alt="" />
+        </a>
+        <form action="" class="search">
+          <input type="search" placeholder="Search on products..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div onclick="openCart()" class="cart_header">
+          <div class="icon_cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count_items">0</span>
+          </div>
+          <div class="total_price">
+            <p>My Cart:</p>
+            <p class="price_cart">$0</p>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="container links">
+          <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./all_products.html">all products</a></li>
+            <li><a href="./about_us.html">about us</a></li>
+            <li><a href="./contact.html">contact</a></li>
+          </ul>
+
+          <div class="login_signup">
+            <a href="./login.html"
+              >login <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></a>
+            <a href="./signup.html"
+              >sign up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Cart -->
+    <section class="cart">
+      <div class="cart-top">
+        <h4>
+          My Cart
+          <span>( <span class="total_items">0</span> items in cart )</span>
+        </h4>
+        <div onclick="closeCart()" class="close-cart">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-bot">
+        <div class="sub_total">
+          <p>Cart Subtotal</p>
+          <span>$0</span>
+        </div>
+        <div class="cart-cta">
+          <button class="checkout">Proceed to checkout</button>
+          <button class="shop">Shop more</button>
+        </div>
+      </div>
+    </section>
+    <!-- End Cart -->
+
+    <!-- Start Product Details -->
+    <section class="product-details">
+      <div class="container">
+        <div class="images">
+          <div class="img">
+            <img src="./assets/img/product/product-1.jpg" alt="product 1" />
+          </div>
+          <div class="img">
+            <img src="./assets/img/product/product-1.jpg" alt="product 1" />
+          </div>
+          <div class="img">
+            <img src="./assets/img/product/product-1.jpg" alt="product 1" />
+          </div>
+          <div class="img">
+            <img src="./assets/img/product/product-1.jpg" alt="product 1" />
+          </div>
+        </div>
+        <div class="main-img">
+          <img src="./assets/img/product/product-1.jpg" alt="product 1" />
+        </div>
+        <div class="info">
+          <div class="name">Apple iPhone 15 Pro</div>
+          <div class="rate">
+            <div class="stars">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="review">
+              <a href="#">1 Review</a>
+            </div>
+            <div class="sep"></div>
+            <div class="add-review">
+              <a href="#">add review</a>
+            </div>
+          </div>
+          <div class="price">
+            <div class="new">$999</div>
+            <div class="old">$1099</div>
+          </div>
+          <div class="stock">
+            <div class="availability"><span>availability:</span> in stock</div>
+            <div class="sku"><span>sku:</span> Apple-iPhone-15-Pro</div>
+          </div>
+          <p class="description">
+            Typi non habent claritatem insitam, est usus legentis in iis qui
+            facit eorum claritatem. Investigationes demonstraverunt lectores
+            legere me lius quod ii legunt saepius. Claritas est etiam processus.
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when anunknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+          <div class="add-to-cart">
+            <div class="quantity">
+              <button>-</button>
+              <div>1</div>
+              <button>+</button>
+            </div>
+            <button class="adc">add to cart</button>
+          </div>
+          <div class="cta">
+            <div class="icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-solid fa-print"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Product Details -->
+
+    <!-- Start Dtails Section -->
+    <section class="details-reviews">
+      <div class="container">
+        <div class="head">
+          <h2 class="details-btn active">Details</h2>
+          <h2 class="reviews-btn">Reviews 5</h2>
+        </div>
+        <div class="details active">
+          <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <h3>
+            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by
+            Cicero in 45 BC
+          </h3>
+          <p>
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+            sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+            aliquid ex ea commodi consequatur? Quis autem vel eum iure
+            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+            pariatur?"
+          </p>
+          <div class="images">
+            <img src="/assets/img/product/product-1-long.png" alt="" />
+            <img src="/assets/img/product/product-1-details.jpg" alt="" />
+            <img src="/assets/img/product/product-1-details-1.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="reviews">
+          <div class="content">
+            <div class="head">Customer Reviews</div>
+            <div class="review">
+              <div class="title">Awesome Product</div>
+              <div class="rating">
+                <div>
+                  <span>Quality</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Price</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti quia eligendi molestias illum libero et.
+              </p>
+              <div class="author">Review By Shahnewaz Sakil</div>
+              <div class="date">Posted on 1/21/20</div>
+            </div>
+            <div class="review">
+              <div class="title">Awesome Product</div>
+              <div class="rating">
+                <div>
+                  <span>Quality</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Price</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti quia eligendi molestias illum libero et.
+              </p>
+              <div class="author">Review By Shahnewaz Sakil</div>
+              <div class="date">Posted on 1/21/20</div>
+            </div>
+            <div class="review">
+              <div class="title">Awesome Product</div>
+              <div class="rating">
+                <div>
+                  <span>Quality</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Price</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti quia eligendi molestias illum libero et.
+              </p>
+              <div class="author">Review By Shahnewaz Sakil</div>
+              <div class="date">Posted on 1/21/20</div>
+            </div>
+            <div class="review">
+              <div class="title">Awesome Product</div>
+              <div class="rating">
+                <div>
+                  <span>Quality</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Price</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <div class="stars">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti quia eligendi molestias illum libero et.
+              </p>
+              <div class="author">Review By Shahnewaz Sakil</div>
+              <div class="date">Posted on 1/21/20</div>
+            </div>
+          </div>
+          <div class="add-review">
+            <h4>Your Reviewing</h4>
+            <div class="box">
+              <div class="title">Your Rating <span>*</span></div>
+              <div class="rating">
+                <div>
+                  <span>Quality</span>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Price</span>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div>
+                  <span>Value</span>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="title">Nickname <span>*</span></div>
+              <input type="text" />
+            </div>
+            <div class="box">
+              <div class="title">Summary <span>*</span></div>
+              <input type="text" />
+            </div>
+            <div class="box">
+              <div class="title">Review <span>*</span></div>
+              <textarea name="" id=""></textarea>
+            </div>
+            <button>SUBMIT REVIEW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Dtails Section -->
+
+    <!-- Start Sale Section -->
+    <section class="sale">
+      <div class="container">
+        <div class="products-swiper swiper">
+          <div class="sale_header">
+            <h2>on sale <span>products</span></h2>
+          </div>
+          <div class="products swiper-wrapper"></div>
+          <div class="swiper-button-next btn-swiper"></div>
+          <div class="swiper-button-prev btn-swiper"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Sale Section -->
+
+    <!-- Start Footer Section -->
+    <footer>
+      <div class="top">
+        <div class="container">
+          <div class="box">
+            <div class="logo">
+              <img src="./assets/img/logo-white.png" alt="Logo" />
+            </div>
+            <div class="costomer-service">
+              <div class="icon">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div class="content">
+                <h2>hotline free 24/7:</h2>
+                <h2 class="phone">(+100) 123 456 7890</h2>
+              </div>
+            </div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </p>
+          </div>
+          <div class="box">
+            <h2>FAQs & Help</h2>
+            <ul>
+              <li><a href="#">F.A.Q's</a></li>
+              <li><a href="#">Ordering Traking</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>shipping & delivery</h2>
+            <ul>
+              <li><a href="#">delivery information</a></li>
+              <li><a href="#">discount</a></li>
+              <li><a href="#">payment & shipping</a></li>
+              <li><a href="#">estimated delivery time</a></li>
+              <li><a href="#">shipping guide</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>information</h2>
+            <ul>
+              <li><a href="#">popular</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">your acount</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">trems & condition</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bot">
+        <div class="container">
+          <div class="left">
+            <p>Copyright &copy; Topico. All Rights Reserved.</p>
+          </div>
+          <div class="payments">
+            <img src="./assets/img/payment-1.png" alt="" />
+            <img src="./assets/img/payment-2.png" alt="" />
+            <img src="./assets/img/payment-3.png" alt="" />
+            <img src="./assets/img/payment-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/addToCart.js"></script>
+    <script src="./assets/js/swipper.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
