@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check Out</title>
+  <!-- Link CSS Components -->
+  <link rel="stylesheet" href="./assets/css/components/header.css" />
+  <link rel="stylesheet" href="./assets/css/components/sale.css" />
+  <link rel="stylesheet" href="./assets/css/components/product-card.css" />
+  <link rel="stylesheet" href="./assets/css/components/footer.css" />
+  <link rel="stylesheet" href="./assets/css/components/cart.css" />
+  <!-- Link global and Home CSS  -->
+  <link rel="stylesheet" href="./assets/css/pages/checkout.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header>
+    <div class="container top-nav">
+      <a href="./index.html">
+        <img src="./assets/img/logo-black.png" alt="" />
+      </a>
+      <form action="" class="search">
+        <input type="search" placeholder="Search on products..." />
+        <button type="submit">Search</button>
+      </form>
+
+      <div onclick="openCart()" class="cart_header">
+        <div class="icon_cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="count_items">0</span>
+        </div>
+        <div class="total_price">
+          <p>My Cart:</p>
+          <p class="price_cart">$0</p>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="container links">
+        <ul>
+          <li class="active"><a href="./index.html">home</a></li>
+          <li><a href="./all_products.html">all products</a></li>
+          <li><a href="./about_us.html">about us</a></li>
+          <li><a href="./contact.html">contact</a></li>
+        </ul>
+
+        <div class="login_signup">
+          <a href="./login.html">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+          <a href="./signup.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Start Cart -->
+  <section class="cart">
+    <div class="cart-top">
+      <h4>
+        My Cart
+        <span>( <span class="total_items">0</span> items in cart )</span>
+      </h4>
+      <div onclick="closeCart()" class="close-cart">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-bot">
+      <div class="sub_total">
+        <p>Cart Subtotal</p>
+        <span>$0</span>
+      </div>
+      <div class="cart-cta">
+        <button class="checkout">Proceed to checkout</button>
+        <button class="shop">Shop more</button>
+      </div>
+    </div>
+  </section>
+  <!-- End Cart -->
+
+  <!-- Start Checkout -->
+  <section class="checkout">
+    <div class="container">
+      <div class="details">
+        <div class="head">
+          <h2>Billing Detailes</h2>
+        </div>
+        <div class="user-info">
+          <div class="country">
+            <label for="country">Country <span>*</span></label>
+            <select id="country">
+              <option value="morocco" selected>Morocco</option>
+              <option value="palastine">Palastine</option>
+              <option value="egypte">Egypte</option>
+              <option value="algérie">Algérie</option>
+              <option value="liban">liban</option>
+            </select>
+          </div>
+          <div class="name">
+            <div>
+              <label for="firstname">First Name <span>*</span></label>
+              <input type="text" id="firstname" name="firstname" />
+            </div>
+            <div>
+              <label for="lastname">Last Name <span>*</span></label>
+              <input type="text" id="lastname" name="lastname" />
+            </div>
+          </div>
+          <div class="company">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div class="address">
+            <label for="address">Address <span>*</span></label>
+            <input type="text" name="address" id="address" />
+            <input type="text" name="address2" id="address2" />
+          </div>
+          <div class="city">
+            <label for="city">Town / City <span>*</span></label>
+            <input type="text" id="city" name="city" />
+          </div>
+          <div class="state">
+            <div>
+              <label for="state">State / County <span>*</span></label>
+              <input type="text" id="state" name="state" />
+            </div>
+            <div>
+              <label for="zip">Postcode / Zip <span>*</span></label>
+              <input type="text" id="zip" name="zip" />
+            </div>
+          </div>
+          <div class="phone">
+            <div>
+              <label for="email">Email Address <span>*</span></label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div>
+              <label for="phone">Phone <span>*</span></label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div class="head">
+          <h2>Your Order</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Product</td>
+              <td>Total</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Product 1 × 1</td>
+              <td>$165.00</td>
+            </tr>
+            <tr>
+              <td>Product 2 × 4</td>
+              <td>$165.00</td>
+            </tr>
+            <tr>
+              <td>Product 3 × 2</td>
+              <td>$165.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Cart Subtotal</td>
+              <td>$1250.00</td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td>
+                <div>
+                  <input type="radio" name="shipping" id="flat" />
+                  <label for="flat">Flat Rate: $7.00</label>
+                </div>
+                <div>
+                  <input type="radio" name="shipping" id="free" />
+                  <label for="free"> Free Shipping</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Order Total</td>
+              <td class="total">$1250.00</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="payment">
+          <div class="box">
+            <div class="title">
+              <h2>Direct Bank Transfer</h2>
+              <span>+</span>
+            </div>
+            <p class="content active">
+              Make your payment directly into our bank account. Please use
+              your Order ID as the payment reference. Your order won’t be
+              shipped until the funds have cleared in our account.
+            </p>
+          </div>
+          <div class="box">
+            <div class="title">
+              <h2>Cheque Payment</h2>
+              <span>+</span>
+            </div>
+            <p class="content">
+              Make your payment directly into our bank account. Please use
+              your Order ID as the payment reference. Your order won’t be
+              shipped until the funds have cleared in our account.
+            </p>
+          </div>
+          <div class="box">
+            <div class="title">
+              <h2>PayPal</h2>
+              <span>+</span>
+            </div>
+            <p class="content">
+              Make your payment directly into our bank account. Please use
+              your Order ID as the payment reference. Your order won’t be
+              shipped until the funds have cleared in our account.
+            </p>
+          </div>
+          <button>PLACE ORDER</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Checkout -->
+
+  <!-- Start Footer Section -->
+  <footer>
+    <div class="top">
+      <div class="container">
+        <div class="box">
+          <div class="logo">
+            <img src="./assets/img/logo-white.png" alt="Logo" />
+          </div>
+          <div class="costomer-service">
+            <div class="icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="content">
+              <h2>hotline free 24/7:</h2>
+              <h2 class="phone">(+100) 123 456 7890</h2>
+            </div>
+          </div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+        </div>
+        <div class="box">
+          <h2>FAQs & Help</h2>
+          <ul>
+            <li><a href="#">F.A.Q's</a></li>
+            <li><a href="#">Ordering Traking</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>shipping & delivery</h2>
+          <ul>
+            <li><a href="#">delivery information</a></li>
+            <li><a href="#">discount</a></li>
+            <li><a href="#">payment & shipping</a></li>
+            <li><a href="#">estimated delivery time</a></li>
+            <li><a href="#">shipping guide</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>information</h2>
+          <ul>
+            <li><a href="#">popular</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">your acount</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">trems & condition</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bot">
+      <div class="container">
+        <div class="left">
+          <p>Copyright &copy; Topico. All Rights Reserved.</p>
+        </div>
+        <div class="payments">
+          <img src="./assets/img/payment-1.png" alt="" />
+          <img src="./assets/img/payment-2.png" alt="" />
+          <img src="./assets/img/payment-3.png" alt="" />
+          <img src="./assets/img/payment-4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/products.js"></script>
+  <script src="./assets/js/addToCart.js"></script>
+  <script src="./assets/js/swipper.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

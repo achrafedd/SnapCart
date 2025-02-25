@@ -1,0 +1,163 @@
+/*==============
+  Start Checkout
+  ============*/
+
+.checkout {
+  margin-block: 50px;
+}
+
+.checkout .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.checkout .details {
+  flex: 1;
+}
+
+.checkout .head h2 {
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.checkout .name,
+.checkout .state {
+  display: flex;
+  gap: 10px;
+}
+
+.checkout .name div,
+.checkout .state div {
+  flex: 1;
+}
+
+.checkout label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.checkout label span {
+  color: red;
+}
+
+.checkout select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+}
+
+.checkout input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid var(--border-color);
+}
+
+.checkout input:focus {
+  border-color: #000;
+}
+
+.checkout .order {
+  flex: 1;
+}
+
+.order {
+  padding: 20px;
+  border: 3px solid var(--border-color);
+}
+
+.order table {
+  width: 100%;
+}
+
+.order  tr {
+  width: 100%;
+  display: flex;
+  color: var(--parag-color);
+}
+
+.order  td {
+  display: block;
+  width: 50%;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order tbody tr:hover {
+  background-color: var(--border-color);
+}
+
+.order label,
+.order input{
+  display: inline;
+  width: fit-content;
+}
+
+.order .total {
+  font-weight: bold;
+  color: #000;
+}
+
+.order .payment {
+  margin-block: 30px;
+}
+
+.payment .title {
+  font-size: 12px;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  font-weight: normal;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.payment .title span {
+  font-size: 25px;
+}
+
+.payment p {
+  font-size: 14px;
+  line-height: 23px;
+  height: 0px;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.payment p.active {
+  height: 100%;
+  opacity: 1;
+}
+
+.payment button {
+  width: 100%;
+  margin-block: 30px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #222;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+}
+
+.payment button:hover {
+  background-color: transparent;
+  color: #222;
+}
+/*==============
+  End Checkout
+  ============*/
