@@ -200,6 +200,10 @@
   gap: 20px;
 }
 
+.subscription .box img {
+  width: 70px;
+}
+
 .subscription .content {
   display: flex;
   flex-direction: column;
