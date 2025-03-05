@@ -1,0 +1,97 @@
+/*================
+  Start about
+  ==============*/
+.about {
+  margin-block: 50px;
+  background: url(../../img/about-bg.jpg) no-repeat;
+  background-size: 100%;
+  padding-top: 145px;
+}
+
+.about .container {
+  background-color: #fff;
+  padding: 50px 100px;
+}
+
+.about .title {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about .short-desc{
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.about .quote {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about .quote .line {
+  background-color: var(--main-color);
+  width: 5px;
+  height: 40px;
+}
+
+.about .quote p {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.about .quote p span {
+  color: var(--main-color);
+}
+
+.about .about-cards,
+.about .members{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.about .about-card {
+  width: 300px;
+}
+
+.about-card h3 {
+  margin-block: 20px;
+  text-transform: capitalize;
+}
+
+.about-card p {
+  font-size: 14px;
+}
+
+.member {
+  width: 200px;
+  text-align: center;
+}
+
+.member .img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+.member img {
+  transition: 0.3s ease-in;
+}
+
+.member:hover img {
+  scale: 1.1;
+} 
+
+.member span {
+  font-size: 13px;
+}
+
+/*=============
+  End About
+  ============*/

@@ -17,14 +17,14 @@ backButton?.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
-detailsBtn.addEventListener("click", () => {
+detailsBtn?.addEventListener("click", () => {
   reviewsBtn.classList.remove("active");
   detailsBtn.classList.add("active");
   reviews.classList.remove("active");
   details.classList.add("active");
 });
 
-reviewsBtn.addEventListener("click", () => {
+reviewsBtn?.addEventListener("click", () => {
   detailsBtn.classList.remove("active");
   reviewsBtn.classList.add("active");
   details.classList.remove("active");

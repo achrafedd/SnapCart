@@ -1,11 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About us</title>
+  <!-- Link CSS Components -->
+  <link rel="stylesheet" href="./assets/css/components/header.css" />
+  <link rel="stylesheet" href="./assets/css/components/footer.css" />
+  <link rel="stylesheet" href="./assets/css/components/cart.css" />
+  <!-- Link global and Home CSS  -->
+  <link rel="stylesheet" href="./assets/css/pages/about_us.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    About Us Page
+  <!-- Start Header -->
+  <header>
+    <div class="container top-nav">
+      <a href="./index.html">
+        <img src="./assets/img/logo-black.png" alt="" />
+      </a>
+      <form action="" class="search">
+        <input type="search" placeholder="Search on products..." />
+        <button type="submit">Search</button>
+      </form>
+
+      <div onclick="openCart()" class="cart_header">
+        <div class="icon_cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="count_items">0</span>
+        </div>
+        <div class="total_price">
+          <p>My Cart:</p>
+          <p class="price_cart">$0</p>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <div class="container links">
+        <ul>
+          <li><a href="./index.html">home</a></li>
+          <li><a href="./all_products.html">all products</a></li>
+          <li class="active"><a href="./about_us.html">about us</a></li>
+          <li><a href="./contact.html">contact</a></li>
+        </ul>
+
+        <div class="login_signup">
+          <a href="./login.html">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+          <a href="./signup.html">sign up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- Start Cart -->
+  <section class="cart">
+    <div class="cart-top">
+      <h4>
+        My Cart
+        <span>( <span class="total_items">0</span> items in cart )</span>
+      </h4>
+      <div onclick="closeCart()" class="close-cart">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-bot">
+      <div class="sub_total">
+        <p>Cart Subtotal</p>
+        <span>$0</span>
+      </div>
+      <div class="cart-cta">
+        <button class="checkout">Proceed to checkout</button>
+        <button class="shop">Shop more</button>
+      </div>
+    </div>
+  </section>
+  <!-- End Cart -->
+
+  <!-- Start About -->
+  <section class="about">
+    <div class="container">
+      <h2 class="title">About SnapCart</h2>
+      <p class="short-desc">
+        Vivamus a lacinia sem. Integer in enim sapien. Aenean vitae hendrerit
+        nisi, ut suscipit justo. Duis hendrerit sceleri sque dui. Donec ornare
+        massa vitae neque lobortis rutrum.
+      </p>
+      <div class="quote">
+        <div class="line"></div>
+        <p>
+          Lorem ipsum <span>dolor sit amet</span>, consectetur adipiscing
+          elit. Nunc hendrerit tellus et nisi ultra trices, eu feugiat sapien
+          commodo. Praesent vitae ipsum et risus.
+        </p>
+      </div>
+      <p class="short-desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+        hendrerit tellus et nisi ultrices, eu feugiat sapien com modo.
+        Praesent vitae ipsum et risus tempus tincidunt in tincidunt justo.
+        Nunc consectetur non sapien id faucibus. Curabitur id nibh eu felis
+        pellentesque pellentesque quis vel nulla. Vivamus a lacinia sem.
+        Integer in enim sapien. Aenean vitae hendrerit nisi, ut suscipit
+        justo. Duis hendrerit scelerisque dui. Donec ornare massa vitae neque
+        lobor tis rutrum.
+      </p>
+      <h2 class="main-title">what we do?</h2>
+      <div class="about-cards">
+        <div class="about-card">
+          <img src="./assets/img/about-1.jpg" alt="what we do?" />
+          <h3>what we do?</h3>
+          <p>
+            Suspendisse turpis ipsum, tempus in nulla eu, posuere pharetra
+            nibh. In dignissim vitae lorem non mollis.
+          </p>
+        </div>
+        <div class="about-card">
+          <img src="./assets/img/about-2.jpg" alt="our mession" />
+          <h3>our mession</h3>
+          <p>
+            Suspendisse turpis ipsum, tempus in nulla eu, posuere pharetra
+            nibh. In dignissim vitae lorem non mollis.
+          </p>
+        </div>
+        <div class="about-card">
+          <img src="./assets/img/about-3.jpg" alt="hestory of us" />
+          <h3>hestory of us</h3>
+          <p>
+            Suspendisse turpis ipsum, tempus in nulla eu, posuere pharetra
+            nibh. In dignissim vitae lorem non mollis.
+          </p>
+        </div>
+      </div>
+      <h2 class="main-title">our team member</h2>
+      <div class="members">
+        <div class="member">
+          <div class="img">
+            <img src="./assets/img/members/as1.jpg" alt="" />
+          </div>
+          <h4>John Doe</h4>
+          <span>Web Designer</span>
+        </div>
+        <div class="member">
+          <div class="img">
+            <img src="./assets/img/members/as2.jpg" alt="" />
+          </div>
+          <h4>Shahnewaz Sakil</h4>
+          <span>Business Man</span>
+        </div>
+        <div class="member">
+          <div class="img">
+            <img src="./assets/img/members/as3.jpg" alt="" />
+          </div>
+          <h4>Salim Rana</h4>
+          <span>CEO Themepure</span>
+        </div>
+        <div class="member">
+          <div class="img">
+            <img src="./assets/img/members/as4.jpg" alt="" />
+          </div>
+          <h4>Pavilion Dyne</h4>
+          <span>Story Teller</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About -->
+
+  <!-- Start Footer Section -->
+  <footer>
+    <div class="top">
+      <div class="container">
+        <div class="box">
+          <div class="logo">
+            <img src="./assets/img/logo-white.png" alt="Logo" />
+          </div>
+          <div class="costomer-service">
+            <div class="icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="content">
+              <h2>hotline free 24/7:</h2>
+              <h2 class="phone">(+100) 123 456 7890</h2>
+            </div>
+          </div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+          </p>
+        </div>
+        <div class="box">
+          <h2>FAQs & Help</h2>
+          <ul>
+            <li><a href="#">F.A.Q's</a></li>
+            <li><a href="#">Ordering Traking</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>shipping & delivery</h2>
+          <ul>
+            <li><a href="#">delivery information</a></li>
+            <li><a href="#">discount</a></li>
+            <li><a href="#">payment & shipping</a></li>
+            <li><a href="#">estimated delivery time</a></li>
+            <li><a href="#">shipping guide</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>information</h2>
+          <ul>
+            <li><a href="#">popular</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">your acount</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">trems & condition</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bot">
+      <div class="container">
+        <div class="left">
+          <p>Copyright &copy; Topico. All Rights Reserved.</p>
+        </div>
+        <div class="payments">
+          <img src="./assets/img/payment-1.png" alt="" />
+          <img src="./assets/img/payment-2.png" alt="" />
+          <img src="./assets/img/payment-3.png" alt="" />
+          <img src="./assets/img/payment-4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/products.js"></script>
+  <script src="./assets/js/addToCart.js"></script>
+  <script src="./assets/js/swipper.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

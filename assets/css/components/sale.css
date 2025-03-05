@@ -7,28 +7,9 @@
 }
 
 .sale_header {
-  border-bottom: 1px solid var(--border-color);
   padding: 20px 0;
   position: relative;
   width: fit-content;
-}
-
-.sale_header h2 {
-  text-transform: capitalize;
-}
-
-.sale_header span {
-  font-weight: 400;
-}
-
-.sale_header::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: var(--main-color);
 }
 
 /*==================
